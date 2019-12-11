@@ -1,0 +1,218 @@
+/*Display page not found when using phones*/
+
+#notfound > * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#notfound {
+  animation: elementEntrance 1s forwards;
+  display: none;
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 240px;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 252px;
+  font-weight: 900;
+  margin: 0px;
+  color: #262626;
+  text-transform: uppercase;
+  letter-spacing: -40px;
+  margin-left: -20px;
+}
+
+.notfound .notfound-404 h1>span {
+  text-shadow: -8px 0px 0px #fff;
+}
+
+.notfound .notfound-404 h3 {
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #262626;
+  margin: 0px;
+  letter-spacing: 3px;
+  padding-left: 6px;
+}
+
+.notfound h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+@keyframes elementEntrance {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -100px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 {
+    height: 200px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    height: 162px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+    height: 150px;
+    line-height: 162px;
+  }
+  .notfound h2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  #main, #menu, #snake {
+    display: none;
+  }
+  #notfound {
+    display: block;
+  }
+}
+
+*{
+  font-family: 'Orienta', sans-serif;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas{
+    display: none;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+ul{
+  padding: 0px;
+  margin: 0 auto;
+}
+
+#menu{
+  animation: elementEntrance 1s forwards;
+  margin: 0 auto;
+  width: 608px;
+  height: 608px;
+  position: relative;
+}
+
+#menu-pic{
+  border-radius: 30px;
+
+}
+#nav-buttons{
+  position: absolute;
+  top: 420px;
+  left: 304px;
+  transform: translate(-50%,-50%);
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#nav-buttons ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Styling the title*/
+h1{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-size: 40px;
+  cursor: default;
+}
+
+/*Styling the buttons*/
+button{
+  display: inline-block;
+  zoom: 1.2;
+  cursor: pointer;
+  outline: none;
+  background-color: #ca3535;
+  border: 1px solid #bbb;
+  border-color: #c43c35;
+  padding: 12px 30px;
+
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  transition: background-color .2s ease-out;
+}
+
+button:hover{
+  background-color: #ee5f5b;
+}
+
+button:active{
+  background: #c43c35;
+  top: 2px;
+  position: relative;
+  text-shadow: none;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+}
